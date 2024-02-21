@@ -1,3 +1,12 @@
+# A Simple Product Store React Web Appliction
+
+## Deployed Link
+https://mellifluous-croquembouche-c19472.netlify.app/
+
+## Video
+https://drive.google.com/file/d/1edTrU8gXw5vRq0lZ-C5RQbZ43RcRlGL3/view?usp=drive_link
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
