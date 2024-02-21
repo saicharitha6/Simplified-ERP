@@ -77,3 +77,49 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+Frontend Development Assignment: Interactive Product Catalog
+Objective:
+Develop an interactive product catalog web application using React.js and associated libraries to showcase various products. The application should allow users to browse through different categories of products, view details of each product, and include animations/transitions for enhanced user experience.
+Requirements:
+Homepage:
+Display a list of product categories (e.g., electronics, clothing, accessories).
+Each category should have a thumbnail image and a title.
+Clicking on a category should navigate the user to a page displaying products within that category.
+Category Page:
+Display all products within the selected category.
+Each product should have a thumbnail image, title, brief description, and price.
+Include filtering options to sort products by price, popularity, etc.
+Implement pagination if there are many products in a category.
+Product Details Page:
+Upon clicking on a product, show detailed information about the product.
+Include larger images, a detailed description, specifications, and related products (if available).
+Allow users to add the product to their cart or wishlist.
+Cart/Wishlist:
+Users should be able to view their cart and wishlist.
+Implement basic functionalities like adding/removing items, updating quantities, and clearing the cart/wishlist.
+
+Animations and Transitions:
+Implement smooth transitions/animations throughout the application using libraries like Framer Motion, GSAP, or any other animation libraries of your choice.
+Use animations for page transitions, hover effects on product thumbnails, and any other areas to enhance user experience.
+Bonus Features (Optional, but recommended for candidates aiming for extra credit):
+Implement responsive design for mobile and tablet devices.
+Add functionality for user authentication and persistent cart/wishlist storage using local storage or any backend service (if comfortable).
+Incorporate advanced animations such as parallax scrolling, interactive elements, etc., to further enhance the user interface.
+Submission Guidelines:
+Provide the public GitHub repository link in the Google Form attached in mail.
+Include a README file 
+Deploy the application to a hosting platform (e.g., Netlify, Vercel) and provide the live link along with the repository link.
+Ensure code readability, maintainability, and adherence to best practices.
+Evaluation Criteria:
+Functionality: Does the application meet the specified requirements? Is it fully functional without errors?
+Code Quality: Is the code well-structured, clean, and maintainable? Are best practices followed?
+User Experience: Are animations/transitions implemented effectively to enhance the user interface? Is the application intuitive and easy to navigate?
+Bonus Features: If bonus features are implemented, are they well-executed and add value to the application?
+Overall Impression: How well does the candidate's submission demonstrate their frontend development skills and creativity?
+
+
