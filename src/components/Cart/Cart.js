@@ -1,10 +1,10 @@
-// Cart.js
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import CartContext from '../context/CartContext'; // Import CartContext
 import styles from './Cart.module.css'; // Import modular CSS
 
 const Cart = () => {
   const { cartItems, addToCart, removeFromCart, clearCart } = useContext(CartContext); // Access cartItems and functions from CartContext
+  const [totalPrice, setTotalPrice] = useState(0); // State to hold total price
 
   // Function to remove an item from the cart
   const handleRemoveFromCart = (item) => {
@@ -15,6 +15,26 @@ const Cart = () => {
   const handleClearCart = () => {
     clearCart();
   };
+
+  // Function to handle placing an order
+  const handleOrder = () => {
+    // Implement your logic for placing the order here
+    console.log('Order placed!');
+  };
+
+  // Calculate total price
+  const calculateTotalPrice = () => {
+    let total = 0;
+    cartItems.forEach(item => {
+      total += item.price;
+    });
+    setTotalPrice(total);
+  };
+
+  // Calculate total price on initial render and whenever cartItems change
+  useEffect(() => {
+    calculateTotalPrice();
+  }, [cartItems]);
 
   return (
     <div>
@@ -39,7 +59,9 @@ const Cart = () => {
           ))}
         </tbody>
       </table>
+      <div className={styles.total}>Total Price: ${totalPrice}</div><br/>
       <button className={styles.clear} onClick={handleClearCart}>Clear Cart</button>
+      <button className={styles.clear} onClick={handleOrder}>Place Order</button>
     </div>
   );
 };

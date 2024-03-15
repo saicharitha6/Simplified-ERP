@@ -7,7 +7,7 @@
 
 @media (max-width: 768px) {
   .productDetails {
-    flex-direction: column; 
+    flex-direction: column;
     text-align: center;
     padding: 10px;
   }
@@ -24,14 +24,15 @@
     width: 100%;
     height: 30%;
     padding: 0;
-    margin-bottom: 20px; /* Add margin bottom for spacing */
-    border: 2px solid violet; /* Set border color to violet */
+    margin-bottom: 20px;
+    /* Add margin bottom for spacing */
+    /* border: 2px solid violet; Set border color to violet */
   }
 }
 
 .detailsContainer {
   flex: 3;
-  background-color: rgb(240, 128, 231);
+  background-color: rgb(254, 252, 254);
   border-radius: 5px;
   padding: 20px;
 }
@@ -39,10 +40,12 @@
 @media (max-width: 768px) {
   .productImage {
     width: 50%;
-    height: 30%; /* Ensure image aspect ratio is maintained */
+    height: 30%;
+    /* Ensure image aspect ratio is maintained */
     object-fit: cover;
     border-radius: 5px;
-    border: 2px solid violet; /* Set border color to violet */
+    border: 2px solid violet;
+    /* Set border color to violet */
   }
 }
 
@@ -53,10 +56,12 @@
   border-radius: 5px;
   border-color: violet;
   cursor: pointer;
-  margin-top: 20px; /* Add margin top for spacing */
+  margin-top: 20px;
+  /* Add margin top for spacing */
 }
 
 .button:disabled {
-  background-color: gray; /* Change background color when button is disabled */
+  background-color: gray;
+  /* Change background color when button is disabled */
   cursor: not-allowed;
 }

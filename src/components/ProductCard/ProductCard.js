@@ -4,7 +4,7 @@ import styles from './ProductCard.module.css'; // Import modular CSS for Product
 const ProductCard = ({ product }) => {
   return (
     <div className={styles.productCard}>
-      <img src={product.image} alt={product.title} className={styles.productImage} />
+      <img src={product.thumbnail} alt={product.title} className={styles.productImage} />
       <div className={styles.productInfo}>
         <h2 className={styles.productTitle}>{product.title}</h2>
         {/* <p className={styles.productDescription}>{product.description}</p> */}

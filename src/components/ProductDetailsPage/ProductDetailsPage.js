@@ -1,18 +1,34 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import products from '../products';
+import { getInventory } from '../DummyAPI/index'; // Import the getInventory function
 import styles from './ProductDetailsPage.module.css'; // Import modular CSS
 import CartContext from '../context/CartContext'; // Import CartContext
 
 const ProductDetailsPage = () => {
   const { productId } = useParams();
-  const product = products.find(product => product.id === parseInt(productId));
+  const [product, setProduct] = useState(null);
   const { addToCart } = useContext(CartContext); // Access addToCart function from CartContext
   const [isAdded, setIsAdded] = useState(false); // State to track if the item is added to the cart
 
-  if (!product) {
-    return <p>Product not found</p>;
-  }
+  useEffect(() => {
+    getInventory()
+      .then(data => {
+        if (!Array.isArray(data.products)) {
+          throw new Error('Products data is not an array');
+        }
+        const foundProduct = data.products.find(product => product.id === parseInt(productId));
+        if (foundProduct) {
+          setProduct(foundProduct);
+        } else {
+          console.log('Product not found');
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching product details:', error);
+      });
+  }, [productId]);
+  
+  
 
   const handleAddToCart = () => {
     if (!isAdded) { // Check if the item is not already added to the cart
@@ -23,10 +39,14 @@ const ProductDetailsPage = () => {
     }
   };
 
+  if (!product) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <div className={styles.productDetails}>
       <div className={styles.imageContainer}>
-        <img src={product.image} alt={product.title} className={styles.productImage} />
+        <img src={product.thumbnail} alt={product.title} className={styles.productImage} />
       </div>
       <div className={styles.detailsContainer}>
         <h2>{product.title}</h2>

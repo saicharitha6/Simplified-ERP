@@ -46,3 +46,4 @@ export const addProduct = (productData) => {
     }).then((res) => res.json());
   };
   
+  
