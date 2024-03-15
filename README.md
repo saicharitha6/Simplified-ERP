@@ -1,16 +1,41 @@
-<<<<<<< HEAD
-# A Simple Product Store React Web Appliction
+# Simplified-ERP-System-with-React
 
 ## Deployed Link
-https://mellifluous-croquembouche-c19472.netlify.app/
+https://65f43cc51424ac5b136fdb7e--guileless-gnome-30ca26.netlify.app/
 
 ## Video
-https://drive.google.com/file/d/1edTrU8gXw5vRq0lZ-C5RQbZ43RcRlGL3/view?usp=drive_link
+https://drive.google.com/file/d/1bGs7y8Xp4W_EWIKuAoAV7OccsQej0Kvz/view?usp=sharing
+
+# Document having some ScreenShorts of ERP Syatem
+https://docs.google.com/document/d/1802ylY0pBPBOAxTX5nugIVeVkeFsItd0-Q9WN1t4ZFQ/edit?usp=sharing
+
+
+# Project Overview 
+The goal of this project is to create a simplified interface for an ERP (Enterprise Resource Planning) system, designed to manage basic business operations efficiently. The system consists of several pages including Dashboard, Products Management, and Orders Management. Additionally, an optional feature, Orders Calendar View, can be implemented.
+
+Dashboard Display a summary of key metrics or features (e.g., total number of products, orders, customers). Include links or buttons for quick navigation to the Products and Orders management pages.
+
+Products Management Present a list of products with details such as name, category, price, and stock quantity, using mock data. Enable functionalities to add, edit, and delete products.
+
+Orders Management Show a list of orders, including details like order ID, customer name, order date, and status, using mock data. (Optional) Allow viewing of order details, updating the order status, and deletion of orders.
+
+Orders Calendar View Implement a calendar view that displays orders on their expected delivery dates. Provide the ability to click on a date to view all orders due for delivery that day.
+
+
+# Usage of Project
+Upon running the application, you will be directed to the Home page contains the categories of products, in nav bar provides options like dashboard which provides an overview of the system's features. Use the provided links or buttons to navigate to the Products Management, Customer Details and Orders Management pages. In the Products Management page, you can view, add, edit, and delete products. In the Orders Management page, you can view orders and optionally update order details or delete orders. Optionally, navigate to the Orders Calendar View to visualize orders based on their expected delivery dates.
+
+I also implemented the general product listing and placing items to cart.
+
 
 
 # Getting Started with Create React App
+# Project Setup & Installation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Clone the repository: git clone https://github.com/saicharitha6/Simplified-ERP.git
+Navigate to the project directory: cd Simplified-ERP
+Install dependencies: npm install
+Running the Application: npm start
 
 ## Available Scripts
 
@@ -78,58 +103,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-
-
-
-Frontend Development Assignment: Interactive Product Catalog
-Objective:
-Develop an interactive product catalog web application using React.js and associated libraries to showcase various products. The application should allow users to browse through different categories of products, view details of each product, and include animations/transitions for enhanced user experience.
-Requirements:
-Homepage:
-Display a list of product categories (e.g., electronics, clothing, accessories).
-Each category should have a thumbnail image and a title.
-Clicking on a category should navigate the user to a page displaying products within that category.
-Category Page:
-Display all products within the selected category.
-Each product should have a thumbnail image, title, brief description, and price.
-Include filtering options to sort products by price, popularity, etc.
-Implement pagination if there are many products in a category.
-Product Details Page:
-Upon clicking on a product, show detailed information about the product.
-Include larger images, a detailed description, specifications, and related products (if available).
-Allow users to add the product to their cart or wishlist.
-Cart/Wishlist:
-Users should be able to view their cart and wishlist.
-Implement basic functionalities like adding/removing items, updating quantities, and clearing the cart/wishlist.
-
-Animations and Transitions:
-Implement smooth transitions/animations throughout the application using libraries like Framer Motion, GSAP, or any other animation libraries of your choice.
-Use animations for page transitions, hover effects on product thumbnails, and any other areas to enhance user experience.
-Bonus Features (Optional, but recommended for candidates aiming for extra credit):
-Implement responsive design for mobile and tablet devices.
-Add functionality for user authentication and persistent cart/wishlist storage using local storage or any backend service (if comfortable).
-Incorporate advanced animations such as parallax scrolling, interactive elements, etc., to further enhance the user interface.
-Submission Guidelines:
-Provide the public GitHub repository link in the Google Form attached in mail.
-Include a README file 
-Deploy the application to a hosting platform (e.g., Netlify, Vercel) and provide the live link along with the repository link.
-Ensure code readability, maintainability, and adherence to best practices.
-Evaluation Criteria:
-Functionality: Does the application meet the specified requirements? Is it fully functional without errors?
-Code Quality: Is the code well-structured, clean, and maintainable? Are best practices followed?
-User Experience: Are animations/transitions implemented effectively to enhance the user interface? Is the application intuitive and easy to navigate?
-Bonus Features: If bonus features are implemented, are they well-executed and add value to the application?
-Overall Impression: How well does the candidate's submission demonstrate their frontend development skills and creativity?
-
-
-=======
-## Simplified-ERP
-# Document having some ScreenShorts of ERP Syatem
-https://docs.google.com/document/d/1802ylY0pBPBOAxTX5nugIVeVkeFsItd0-Q9WN1t4ZFQ/edit?usp=sharing
-
-Simplified-ERP-System-with-React-
-
-Project Overview The goal of this project is to create a simplified interface for an ERP (Enterprise Resource Planning) system, designed to manage basic business operations efficiently. The system consists of several pages including Dashboard, Products Management, and Orders Management. Additionally, an optional feature, Orders Calendar View, can be implemented.
->>>>>>> 6be5f15204b6ae671cb5f429e7183e83e559f0a5
