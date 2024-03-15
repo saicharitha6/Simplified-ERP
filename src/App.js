@@ -10,6 +10,9 @@ import SideMenu from "./screens/Menu/SideMenu";
 import Dashboard from './components/Dashboard/dashboard';
 import ProductList from './screens/Products/products';
 import AddProductForm from './screens/Products/AddProductForm';
+import OrdersPage from './components/Order/Order';
+import CustomerPage from './components/Customers/Customers';
+import OrderLists from './components/Order/OrderLists';
 
 const App = () => {
   return (
@@ -25,6 +28,9 @@ const App = () => {
             <Route path="/cart" element={<Cart />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/productForm" element={<AddProductForm />} />
+            <Route path="/orderPage" element={<OrdersPage />} />
+            <Route path="/Orders" element={<OrderLists />} />
+            <Route path="/customerPage" element={<CustomerPage />} />
           </Routes>
         </div>
       </Router>

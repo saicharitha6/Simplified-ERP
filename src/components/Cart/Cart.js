@@ -5,6 +5,7 @@ import styles from './Cart.module.css'; // Import modular CSS
 const Cart = () => {
   const { cartItems, addToCart, removeFromCart, clearCart } = useContext(CartContext); // Access cartItems and functions from CartContext
   const [totalPrice, setTotalPrice] = useState(0); // State to hold total price
+  const [orderPlaced, setOrderPlaced] = useState(false); // State to track whether order is placed
 
   // Function to remove an item from the cart
   const handleRemoveFromCart = (item) => {
@@ -20,6 +21,7 @@ const Cart = () => {
   const handleOrder = () => {
     // Implement your logic for placing the order here
     console.log('Order placed!');
+    setOrderPlaced(true); // Set orderPlaced to true when order is placed
   };
 
   // Calculate total price
@@ -59,9 +61,17 @@ const Cart = () => {
           ))}
         </tbody>
       </table>
-      <div className={styles.total}>Total Price: ${totalPrice}</div><br/>
+      <div className={styles.total}>Total Price: ${totalPrice}</div><br />
       <button className={styles.clear} onClick={handleClearCart}>Clear Cart</button>
       <button className={styles.clear} onClick={handleOrder}>Place Order</button>
+
+      {/* Popup for order confirmation */}
+      {orderPlaced && (
+        <div className={styles.orderPopup}>
+          <h3>Order Placed Successfully!</h3>
+          {/* <p>Your order has been placed successfully. Thank you!</p> */}
+        </div>
+      )}
     </div>
   );
 };

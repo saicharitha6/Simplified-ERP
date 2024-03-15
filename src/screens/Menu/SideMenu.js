@@ -40,7 +40,7 @@ const SideMenu = () => {
                     <ListItemIcon><StorefrontIcon /></ListItemIcon>
                     <ListItemText primary={"Products"} />
                 </ListItem>
-                <ListItem component={Link} to="/orders">
+                <ListItem component={Link} to="/orderPage">
                     <ListItemIcon><ShoppingCartIcon /></ListItemIcon>
                     <ListItemText primary={"Orders"} />
                 </ListItem>
@@ -59,12 +59,12 @@ const SideMenu = () => {
             >
                 {list("left")}
             </Drawer>
-            <h1 className={styles.top}>Medusa Store</h1>
+            <h1 className={styles.top}>ERP System Store</h1>
             <div className={styles.home}> <NavLink className={styles.nav} to="/">HOME</NavLink></div>
             <div className={styles.cartIcon}>
-              <NavLink to="/cart">
-                <img src={require('../../assests/cart.jpg')} className={styles.cartImage} alt="Cart" />
-              </NavLink>
+                <NavLink to="/cart">
+                    <img src={require('../../assests/cart.jpg')} className={styles.cartImage} alt="Cart" />
+                </NavLink>
             </div>
         </div>
     );

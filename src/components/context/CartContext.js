@@ -12,7 +12,7 @@ export const CartProvider = ({ children }) => {
   const addToCart = (item) => {
     // Check if the item already exists in the cart based on its ID
     const isItemInCart = cartItems.some(cartItem => cartItem.id === item.id);
-  
+
     if (!isItemInCart) {
       // If the item is not in the cart, add it
       setCartItems([...cartItems, item]);

@@ -1,8 +1,10 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { addProduct, getInventory } from '../../components/DummyAPI/index';
+import { Redirect } from 'react-router-dom';
 
-const AddProductForm = ({navigateBack}) => {
-    const [products, setProducts] = useState([]);
+const AddProductForm = () => {
+  const [products, setProducts] = useState([]);
+  const [redirect, setRedirect] = useState(false);
   const [formData, setFormData] = useState({
     title: '',
     category: '',
@@ -20,6 +22,7 @@ const AddProductForm = ({navigateBack}) => {
     addProduct(newProduct)
       .then((data) => setProducts([...products, data]))
       .catch((error) => console.error('Error adding product:', error));
+    console.log(newProduct);
   };
 
   const handleChange = (e) => {
@@ -31,7 +34,7 @@ const AddProductForm = ({navigateBack}) => {
     e.preventDefault();
     handleAddProduct(formData);
     setFormData({ title: '', category: '', price: '', stock: '' });
-    navigateBack();
+    setRedirect(true); // Update state variable to true after form submission
   };
 
   return (
@@ -67,7 +70,7 @@ const styles = {
     marginBottom: '20px',
     maxWidth: '400px',
     margin: '0 auto',
-    marginTop:'10%',
+    marginTop: '10%',
   },
   form: {
     display: 'flex',

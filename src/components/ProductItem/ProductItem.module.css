@@ -4,53 +4,63 @@
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
-  width: calc(25% - 20px); /* Adjust the width for four items per row */
-  display: inline-block; /* Ensure the cards are displayed inline */
-  box-sizing: border-box; /* Include padding and border in the width calculation */
+  width: calc(25% - 20px);
+  /* Adjust the width for four items per row */
+  display: inline-block;
+  /* Ensure the cards are displayed inline */
+  box-sizing: border-box;
+  /* Include padding and border in the width calculation */
 }
 
-p{
-  text-align:start;
+p {
+  text-align: start;
   padding-left: calc(25% - 20px);
 }
 
-.buttonContainer{
+.buttonContainer {
   /* justify-content: space-evenly; */
-  align-items:center;
+  align-items: center;
 }
-.save{
+
+.save {
   background-color: green;
   padding: 10px;
   margin-right: 5px;
   border-radius: 5px;
   color: white;
 }
-input{
+
+input {
   padding: 5px;
   margin: 7px;
 }
-.delete{
+
+.delete {
   background-color: red;
   padding: 10px;
   margin-right: 5px;
   border-radius: 5px;
   color: white;
 }
+
 /* Media queries for responsive layout */
 @media screen and (max-width: 1200px) {
   .productCard {
-    width: calc(33.33% - 20px); /* Adjust the width for three items per row */
+    width: calc(33.33% - 20px);
+    /* Adjust the width for three items per row */
   }
 }
 
 @media screen and (max-width: 768px) {
   .productCard {
-    width: calc(50% - 20px); /* Adjust the width for two items per row */
+    width: calc(50% - 20px);
+    /* Adjust the width for two items per row */
   }
 }
 
 @media screen and (max-width: 576px) {
   .productCard {
-    width: calc(100% - 20px); /* Adjust the width for one item per row */
+    width: calc(100% - 20px);
+    /* Adjust the width for one item per row */
   }
 }

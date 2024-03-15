@@ -1,30 +1,32 @@
 /* CategoryPage.module.css */
 
 .categoryPage {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    margin-top: 5%;
-  }
-  
-  .productList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center products horizontally */
-  }
-   
-  .productLink {
-    text-decoration: none;
-    color: inherit;
-    margin: 10px; /* Adjust spacing between products */
-    /* padding: 12px; */
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center content horizontally */
+  margin-top: 5%;
+}
 
-  .product{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size:xx-large;
-    font-weight: bolder;
-  }
-  
-  /* You can add more styles as needed */
-  
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Center products horizontally */
+}
+
+.productLink {
+  text-decoration: none;
+  color: inherit;
+  margin: 10px;
+  /* Adjust spacing between products */
+  /* padding: 12px; */
+}
+
+.product {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+/* You can add more styles as needed */

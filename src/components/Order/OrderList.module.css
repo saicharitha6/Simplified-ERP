@@ -1,0 +1,84 @@
+.tableContainer {
+  width: 80%;
+  margin: 0 auto;
+  /* Center the table */
+}
+
+.orderCard {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-top: 16px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 20px;
+}
+
+/* Add border to table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Add border to table header */
+th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Add border to table data cells */
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Add border to table rows */
+tr {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Remove bottom border for the last table row */
+tr:last-child {
+  border-bottom: none;
+}
+
+.head {
+  padding-top: 5%;
+}
+
+.orderCard {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-top: 16px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.statusUpdate {
+  display: flex;
+  /* Use flexbox */
+  align-items: center;
+  /* Align items vertically */
+}
+
+.statusUpdate input {
+  flex: 1;
+  /* Take remaining space */
+  margin-right: 8px;
+  /* Add some space between input and button */
+}
+
+.statusUpdate button {
+  flex: none;
+  /* Don't grow or shrink */
+}
+
+.calendarContainer {
+  display: flex;
+  /* Use flexbox */
+  justify-content: center;
+  /* Center content horizontally */
+  margin-top: 20px;
+  /* Add some space from the top */
+}

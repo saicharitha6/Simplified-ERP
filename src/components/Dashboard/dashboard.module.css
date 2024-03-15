@@ -1,0 +1,43 @@
+/* Dashboard.module.css */
+
+.container {
+    padding: 20px;
+    margin-top: 5%;
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cardLink {
+    text-decoration: none;
+}
+
+.card {
+    width: 200px;
+}
+
+.icon {
+    color: #1890ff;
+    background-color: rgba(24, 144, 255, 0.25);
+    border-radius: 20px;
+    font-size: 24px;
+    padding: 8px;
+}
+
+.chartContainer {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .cardContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}

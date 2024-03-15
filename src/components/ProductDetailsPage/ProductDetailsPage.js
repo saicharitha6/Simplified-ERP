@@ -27,8 +27,8 @@ const ProductDetailsPage = () => {
         console.error('Error fetching product details:', error);
       });
   }, [productId]);
-  
-  
+
+
 
   const handleAddToCart = () => {
     if (!isAdded) { // Check if the item is not already added to the cart

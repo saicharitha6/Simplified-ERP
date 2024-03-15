@@ -1,3 +1,7 @@
+// Dashboard.jsx
+
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   DollarCircleOutlined,
   ShoppingCartOutlined,
@@ -5,10 +9,7 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import { Card, Space, Statistic, Table, Typography } from "antd";
-import { useEffect, useState } from "react";
 import { getCustomers, getInventory, getOrders, getRevenue } from "../DummyAPI/index";
-import { Link } from 'react-router-dom';
-
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -19,15 +20,9 @@ import {
   Legend,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
+import styles from "./dashboard.module.css";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 function Dashboard() {
   const [orders, setOrders] = useState(0);
@@ -49,72 +44,37 @@ function Dashboard() {
   }, []);
 
   return (
-    <Space size={20} direction="vertical">
+    <Space size={20} direction="vertical" className={styles.container}>
       <Typography.Title level={4}>Dashboard</Typography.Title>
-      <Space direction="horizontal">
+      <Space direction="horizontal" className={styles.cardContainer}>
+        <Link to="/productlist" className={styles.cardLink}>
+          <DashboardCard
+            icon={<ShoppingOutlined className={styles.icon} />}
+            title={"Total Products"}
+            value={inventory}
+          />
+        </Link>
+        <Link to="/customerPage" className={styles.cardLink}>
+          <DashboardCard
+            icon={<UserOutlined className={styles.icon} />}
+            title={"Customers"}
+            value={customers}
+          />
+        </Link>
+        <Link to="/Orders" className={styles.cardLink}>
+          <DashboardCard
+            icon={<UserOutlined className={styles.icon} />}
+            title={"Orders"}
+            value={orders}
+          />
+        </Link>
         <DashboardCard
-          icon={
-            <ShoppingCartOutlined
-              style={{
-                color: "green",
-                backgroundColor: "rgba(0,255,0,0.25)",
-                borderRadius: 20,
-                fontSize: 24,
-                padding: 8,
-              }}
-            />
-          }
-          title={"Orders"}
-          value={orders}
-        /> <Link to="/productlist">
-        <DashboardCard
-          icon={
-            <ShoppingOutlined
-              style={{
-                color: "blue",
-                backgroundColor: "rgba(0,0,255,0.25)",
-                borderRadius: 20,
-                fontSize: 24,
-                padding: 8,
-              }}
-            />
-          }
-          title={"Toatal Products"}
-          value={inventory}
-       
-        />  </Link>
-        <DashboardCard
-          icon={
-            <UserOutlined
-              style={{
-                color: "purple",
-                backgroundColor: "rgba(0,255,255,0.25)",
-                borderRadius: 20,
-                fontSize: 24,
-                padding: 8,
-              }}
-            />
-          }
-          title={"Customer"}
-          value={customers}
-        />
-        <DashboardCard
-          icon={
-            <DollarCircleOutlined
-              style={{
-                color: "red",
-                backgroundColor: "rgba(255,0,0,0.25)",
-                borderRadius: 20,
-                fontSize: 24,
-                padding: 8,
-              }}
-            />
-          }
+          icon={<DollarCircleOutlined className={styles.icon} />}
           title={"Revenue"}
           value={revenue}
         />
       </Space>
-      <Space>
+      <Space className={styles.chartContainer}>
         <RecentOrders />
         <DashboardChart />
       </Space>
@@ -124,7 +84,7 @@ function Dashboard() {
 
 function DashboardCard({ title, value, icon }) {
   return (
-    <Card>
+    <Card className={styles.card}>
       <Space direction="horizontal">
         {icon}
         <Statistic title={title} value={value} />
@@ -132,6 +92,7 @@ function DashboardCard({ title, value, icon }) {
     </Card>
   );
 }
+
 function RecentOrders() {
   const [dataSource, setDataSource] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -171,19 +132,15 @@ function RecentOrders() {
 }
 
 function DashboardChart() {
-  const [reveneuData, setReveneuData] = useState({
+  const [revenueData, setRevenueData] = useState({
     labels: [],
     datasets: [],
   });
 
   useEffect(() => {
     getRevenue().then((res) => {
-      const labels = res.carts.map((cart) => {
-        return `User-${cart.userId}`;
-      });
-      const data = res.carts.map((cart) => {
-        return cart.discountedTotal;
-      });
+      const labels = res.carts.map((cart) => `User-${cart.userId}`);
+      const data = res.carts.map((cart) => cart.discountedTotal);
 
       const dataSource = {
         labels,
@@ -196,7 +153,7 @@ function DashboardChart() {
         ],
       };
 
-      setReveneuData(dataSource);
+      setRevenueData(dataSource);
     });
   }, []);
 
@@ -214,9 +171,10 @@ function DashboardChart() {
   };
 
   return (
-    <Card style={{ width: 500, height: 250 }}>
-      <Bar options={options} data={reveneuData} />
+    <Card className={styles.chartContainer}>
+      <Bar options={options} data={revenueData} />
     </Card>
   );
 }
+
 export default Dashboard;

@@ -34,8 +34,8 @@ const ProductItem = ({ product, handleEditProduct, handleDeleteProduct }) => {
           <p>Price: ${product.price}</p>
           <p>Stock Quantity: {product.stock}</p>
           <div className={styles.buttonContainer}>
-            <button  className={styles.save} onClick={handleEdit}>Edit</button>
-            <button  className={styles.delete} onClick={() => handleDeleteProduct(product.id)}>Delete</button>
+            <button className={styles.save} onClick={handleEdit}>Edit</button>
+            <button className={styles.delete} onClick={() => handleDeleteProduct(product.id)}>Delete</button>
           </div>
         </div>
       ) : (

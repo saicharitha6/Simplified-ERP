@@ -1,37 +1,36 @@
 /* Cart.module.css */
 .cartTable {
-    width: 95%;
-    border-collapse: collapse;
-    padding: 20px;
-    margin: 20px;
-  }
-  
-  .cartTable th,
-  .cartTable td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  .cartTable th {
-    background-color: #f2f2f2;
-  }
+  width: 95%;
+  border-collapse: collapse;
+  padding: 20px;
+  margin: 20px;
+}
 
-  .head{
-    padding-left: 30px;
-  }
+.cartTable th,
+.cartTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
 
-  .remove{
-    background-color: red;
-    padding: 10px;
-    border-radius: 5px;
-  }
+.cartTable th {
+  background-color: #f2f2f2;
+}
 
-  .clear{
-    justify-content: center;
-    margin-left: 30px;
-    background-color: violet;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
+.head {
+  padding-left: 30px;
+}
+
+.remove {
+  background-color: red;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.clear {
+  justify-content: center;
+  margin-left: 30px;
+  background-color: violet;
+  padding: 10px;
+  border-radius: 5px;
+}
